@@ -20,7 +20,7 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=[
         "http://localhost:5173",
-        "https://tu-proyecto.vercel.app",  # ← agrega esto
+        "https://estructura-five.vercel.app",  # ← agrega esto
     ],
     allow_methods=["*"],
     allow_headers=["*"],
