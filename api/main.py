@@ -16,12 +16,11 @@ import main as pipeline_orchestrator
 
 app = FastAPI(title="TIC Dashboard API")
 
+from fastapi.middleware.cors import CORSMiddleware
+
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=[
-        "http://localhost:5173",
-        "https://estructura-five.vercel.app",  # ← agrega esto
-    ],
+    allow_origin_regex=r"https://estructura.*\.vercel\.app",
     allow_methods=["*"],
     allow_headers=["*"],
 )
