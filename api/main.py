@@ -18,7 +18,10 @@ app = FastAPI(title="TIC Dashboard API")
 
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["http://localhost:5173"],
+    allow_origins=[
+        "http://localhost:5173",
+        "https://tu-proyecto.vercel.app",  # ← agrega esto
+    ],
     allow_methods=["*"],
     allow_headers=["*"],
 )
